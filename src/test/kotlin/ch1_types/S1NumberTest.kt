@@ -1,6 +1,5 @@
-package ch1_types.s1_number
+package ch1_types
 
-import org.example.ch1_types.s1_number.S1Number
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

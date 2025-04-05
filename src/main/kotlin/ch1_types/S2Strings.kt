@@ -1,6 +1,6 @@
-package org.example.ch2_strings.s1_strings
+package org.example.ch1_types
 
-class S1_Strings {
+class S2Strings {
 
     val str = "abcd 123"
 

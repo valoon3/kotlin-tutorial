@@ -1,11 +1,11 @@
-package ch3_Arrays
+package ch1_types
 
-import org.example.ch3_Arrays.S1Arrays
+import org.example.ch1_types.S1Arrays
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
-class S1ArraysTest {
+class S3ArraysTest {
     private val s1Arrays = S1Arrays()
 
     @Test

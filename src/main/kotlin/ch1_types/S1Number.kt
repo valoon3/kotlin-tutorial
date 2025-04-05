@@ -1,4 +1,4 @@
-package org.example.ch1_types.s1_number
+package org.example.ch1_types
 
 class S1Number {
     // Int

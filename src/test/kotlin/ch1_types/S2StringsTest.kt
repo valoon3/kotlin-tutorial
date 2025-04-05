@@ -1,9 +1,9 @@
-package ch2_strings.s1_strings
+package ch1_types
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
-class S1StringsTest {
+class S2StringsTest {
     @Test
     fun 문자열_반복문() {
         val str = "abcd 123"
