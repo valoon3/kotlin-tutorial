@@ -109,7 +109,6 @@ class S1Arrays {
         return simpleArray.toSet()
     }
 
-    // todo: 실제 자료형 확인 필요
     fun arrConvertMap(): Map<String, Int> {
         val pairArray = arrayOf("apple" to 120, "banana" to 150, "cherry" to 90, "apple" to 140)
 
