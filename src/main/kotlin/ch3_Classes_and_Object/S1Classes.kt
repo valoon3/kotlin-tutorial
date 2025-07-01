@@ -51,5 +51,15 @@ class S1Classes(name: String) {
     // 상속
     class Derived(p: Int) : Base(p)
 
+    // 선언을 사용해서 오버라이드가 가능하다
+    interface Shape2 {
+        val vertexCount: Int
+    }
+
+    class Rectangle2(override val vertexCount: Int = 4) : Shape2 // Always has 4 vertices
+
+    class Polygon2 : Shape2 {
+        override var vertexCount: Int = 0  // Can be set to any number later
+    }
 
 }
