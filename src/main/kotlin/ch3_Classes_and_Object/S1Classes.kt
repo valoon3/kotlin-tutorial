@@ -46,4 +46,10 @@ class S1Classes(name: String) {
         }
     }
 
+    open class Base(p: Int)
+
+    // 상속
+    class Derived(p: Int) : Base(p)
+
+
 }
