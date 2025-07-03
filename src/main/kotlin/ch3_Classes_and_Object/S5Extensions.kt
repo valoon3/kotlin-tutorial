@@ -5,3 +5,8 @@ fun MutableList<Int>.swap(index1: Int, index2: Int) {
     this[index1] = this[index2]
     this[index2] = tmp
 }
+
+open class Shape
+class Rectangle: Shape()
+
+
