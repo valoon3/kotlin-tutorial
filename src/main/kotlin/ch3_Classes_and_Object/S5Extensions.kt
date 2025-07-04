@@ -10,3 +10,6 @@ open class Shape
 class Rectangle: Shape()
 
 
+class Example {
+    fun printFunctionType(): String { return "Class method" }
+}

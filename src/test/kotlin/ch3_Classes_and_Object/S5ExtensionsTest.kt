@@ -1,5 +1,6 @@
 package ch3_Classes_and_Object
 
+import org.example.ch3_Classes_and_Object.Example
 import org.example.ch3_Classes_and_Object.Rectangle
 import org.example.ch3_Classes_and_Object.Shape
 import org.example.ch3_Classes_and_Object.swap
@@ -26,6 +27,17 @@ class S5ExtensionsTest {
         }
 
         printClassName(Rectangle())
+    }
+
+    @Test
+    fun testExtensionFunction() {
+
+        fun Example.printFunctionType(): String { return "Extension function 1" }
+
+        fun Example.printFunctionType(i: Int): String { return "Extension function $i" }
+
+        assertEquals("Class method", Example().printFunctionType())
+        assertEquals("Extension function 2", Example().printFunctionType(2))
     }
 
 }
