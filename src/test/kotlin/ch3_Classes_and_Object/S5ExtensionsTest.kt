@@ -1,9 +1,6 @@
 package ch3_Classes_and_Object
 
-import org.example.ch3_Classes_and_Object.Example
-import org.example.ch3_Classes_and_Object.Rectangle
-import org.example.ch3_Classes_and_Object.Shape
-import org.example.ch3_Classes_and_Object.swap
+import org.example.ch3_Classes_and_Object.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -40,4 +37,15 @@ class S5ExtensionsTest {
         assertEquals("Extension function 2", Example().printFunctionType(2))
     }
 
+    @Test
+    fun testCompanionObjectExtension() {
+        fun MyClass.Companion.printCompanion(): String { return "companion" }
+
+        MyClass.printCompanion()
+
+        assertEquals(
+            "companion",
+            MyClass.printCompanion()
+        )
+    }
 }

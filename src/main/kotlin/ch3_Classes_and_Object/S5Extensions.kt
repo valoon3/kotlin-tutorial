@@ -13,3 +13,7 @@ class Rectangle: Shape()
 class Example {
     fun printFunctionType(): String { return "Class method" }
 }
+
+class MyClass {
+    companion object { }  // will be called "Companion"
+}
