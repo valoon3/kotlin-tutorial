@@ -75,6 +75,9 @@ class S1Functions {
         }
     }
 
+    // 후행 ',' 사용 가능
+    fun powerOf(number: Int, exponent: Int,) { /*...*/ }
+
 
 
 
