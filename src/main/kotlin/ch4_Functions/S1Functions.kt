@@ -78,8 +78,12 @@ class S1Functions {
     // 후행 ',' 사용 가능
     fun powerOf(number: Int, exponent: Int,) { /*...*/ }
 
+    // default 인수
+    fun read(b: ByteArray, off: Int = 0, len: Int = b.size,) { /*...*/ }
 
-
-
+    // single expression function
+    fun double1(x: Int): Int = x * 2
+    // 추론 가능
+    fun double2(x: Int) = x * 2
 
 }
