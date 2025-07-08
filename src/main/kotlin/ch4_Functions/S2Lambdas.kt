@@ -60,3 +60,15 @@ class S2Lambdas {
     }
 
 }
+
+class IntTransformer: (Int) -> Int {
+    override operator fun invoke(x: Int): Int = TODO()
+}
+
+val intFunction: (Int) -> Int = IntTransformer()
+
+// Invoking a function type instance
+val stringPlus: (String, String) -> String = String::plus
+val intPlus: Int.(Int) -> Int = Int::plus
+
+// Lambda expressions and anonymous functions

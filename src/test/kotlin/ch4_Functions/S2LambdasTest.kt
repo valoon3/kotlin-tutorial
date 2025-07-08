@@ -1,6 +1,9 @@
 package ch4_Functions
 
+import com.sun.org.apache.xpath.internal.operations.Plus
+import org.example.ch4_Functions.intFunction
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.DisplayName
 import java.util.*
 import kotlin.test.Test
 
@@ -143,5 +146,50 @@ class S2LambdasTest {
 
         assertEquals("test", noParamFunction())
         assertEquals("tset", singleParamFunction("test"))
+    }
+
+    @Test
+    fun intTransformerTest() {
+        val repeatFun: String.(Int) -> String = { times -> this.repeat(times) }
+
+        val repeatFun1 = repeatFun("Hello", 10)
+        println(repeatFun1)
+    }
+
+    @Test
+    fun invokingAFunctionTypeInstanceTest() {
+        val stringPlus: (String, String) -> String = String::plus
+        val stringPlusExternal: String.(String) -> String = String::plus
+
+        val intPlus: Int.(Int) -> Int = Int::plus
+
+        assertEquals("HelloWorld", stringPlus("Hello", "World"))
+        assertEquals("HelloWorld", stringPlusExternal("Hello", "World"))
+        assertEquals("<-->", stringPlus.invoke("<-", "->"))
+        assertEquals(2, intPlus(1, 1))
+        assertEquals(2, intPlus.invoke(1, 1))
+    }
+
+    @Test
+    fun lambda_expressions_and_anonymous_functions() {
+        fun compare(a: String, b: String): Boolean = a.length < b.length
+
+        val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
+    }
+
+    @Test
+    fun totalFunctionExpression() {
+        fun a(x: Int, y: Int): Int {
+            return x + y
+
+        }
+        val b: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
+        val c = { x: Int, y: Int -> x + y }
+    }
+
+    @Test
+    @DisplayName("후행 람다를 통과")
+    fun passing_trailing_lambdas() {
+
     }
 }
