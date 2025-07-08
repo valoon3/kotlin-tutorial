@@ -191,5 +191,16 @@ class S2LambdasTest {
     @DisplayName("후행 람다를 통과")
     fun passing_trailing_lambdas() {
 
+        val items = listOf(1, 2, 3, 4, 5)
+        val product1 = items.fold(1, { acc, e -> acc * e })
+        val product2 = items.fold(1) { acc, e -> acc * e }
+
+        val omittedFun: ((Int, Int) -> Int) -> String = { f -> f(10, 20).toString() }
+
+        assertEquals(120, product1)
+        assertEquals(120, product2)
+        // 후행 람다를 통과할 때는 괄호를 생략할 수 있다
+        assertEquals("30", omittedFun { p1: Int, p2: Int -> p1 + p2 })
+
     }
 }
