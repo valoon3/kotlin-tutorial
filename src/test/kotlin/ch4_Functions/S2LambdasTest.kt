@@ -185,6 +185,8 @@ class S2LambdasTest {
         }
         val b: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
         val c = { x: Int, y: Int -> x + y }
+        val nonameFun = fun(x: Int, y: Int): Int = x + y
+
     }
 
     @Test
