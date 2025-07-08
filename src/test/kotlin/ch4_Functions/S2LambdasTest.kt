@@ -201,6 +201,39 @@ class S2LambdasTest {
         assertEquals(120, product2)
         // 후행 람다를 통과할 때는 괄호를 생략할 수 있다
         assertEquals("30", omittedFun { p1: Int, p2: Int -> p1 + p2 })
+    }
 
+    @Test
+    fun implicit_name_of_a_single_parameter() {
+        val ints = listOf(-1, 0, 1, 2, 3, 4)
+        val result = ints.filter { it > 0 } // this literal is of type '(it: Int) -> Boolean'
+
+        assertEquals(result, listOf(1, 2, 3, 4))
+    }
+
+    @Test
+    @DisplayName("람다 표현에서 값을 반환")
+    fun returning_a_value_from_a_lambda_expression() {
+        val ints = listOf(-1, 0, 1, 2, 3, 4)
+
+        val result1 = ints.filter {
+            val shouldFilter = it > 0
+            shouldFilter
+        }
+
+        val result2 = ints.filter {
+            val shouldFilter = it > 0
+            return@filter shouldFilter
+        }
+
+        assertEquals(result1, result2)
+
+        val strings = listOf("apple", "banana", "cherry", "date", "fig", "grape")
+
+        val result = strings.filter { it.length == 5 }
+            .sortedBy { it }
+            .map { it.uppercase() }
+
+        assertEquals("APPLEGRAPE", result.reduce { acc, s -> acc + s })
     }
 }
