@@ -3,5 +3,5 @@ plugins {
 }
 rootProject.name = "kotlin-tutorial"
 
-include(":my-exercises", ":kotlin-exercises")
+include(":my-exercises", ":kotlin-exercises", ":kotlin-practice")
 
