@@ -1,4 +1,4 @@
-package org.example.ch1_types
+package org.example.myPractice.ch1_types
 
 class S4TypeCheckAndCasts {
 

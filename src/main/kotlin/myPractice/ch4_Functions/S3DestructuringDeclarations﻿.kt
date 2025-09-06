@@ -1,4 +1,4 @@
-package org.example.ch4_Functions
+package org.example.myPractice.ch4_Functions
 
 data class Person(val name: String, val age: Int)
 

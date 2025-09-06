@@ -1,4 +1,4 @@
-package org.example.ch3_Classes_and_Object
+package org.example.myPractice.ch3_Classes_and_Object
 
 class S1Classes(name: String) {
     val firstProperty = "First property: $name".also(::println)

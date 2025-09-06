@@ -1,4 +1,4 @@
-package org.example.ch4_Functions
+package org.example.myPractice.ch4_Functions
 
 class S2Lambdas {
 

@@ -1,4 +1,4 @@
-package org.example.ch2_controlFlow
+package org.example.myPractice.ch2_controlFlow
 
 import javax.management.BadBinaryOpValueExpException
 

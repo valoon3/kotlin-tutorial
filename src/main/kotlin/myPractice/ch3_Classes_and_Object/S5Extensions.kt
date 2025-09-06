@@ -1,4 +1,4 @@
-package org.example.ch3_Classes_and_Object
+package org.example.myPractice.ch3_Classes_and_Object
 
 fun MutableList<Int>.swap(index1: Int, index2: Int) {
     val tmp = this[index1] // 'this' corresponds to the list
@@ -7,7 +7,7 @@ fun MutableList<Int>.swap(index1: Int, index2: Int) {
 }
 
 open class Shape
-class Rectangle: Shape()
+class Rectangle: org.example.myPractice.ch3_Classes_and_Object.Shape()
 
 
 class Example {

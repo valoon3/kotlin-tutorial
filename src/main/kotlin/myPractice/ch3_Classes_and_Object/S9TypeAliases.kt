@@ -1,4 +1,4 @@
-package org.example.ch3_Classes_and_Object
+package org.example.myPractice.ch3_Classes_and_Object
 
 import java.io.File
 
@@ -8,7 +8,7 @@ typealias MyHandler = (Int, String, Any) -> Unit
 
 typealias Predicate<T> = (T) -> Boolean
 
-fun foo(p: Predicate<Int>) = p(42)
+fun foo(p: org.example.myPractice.ch3_Classes_and_Object.Predicate<Int>) = p(42)
 
 fun main() {
     val f: (Int) -> Boolean = { it > 0 }

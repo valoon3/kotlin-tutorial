@@ -1,4 +1,4 @@
-package org.example.ch2_controlFlow
+package org.example.myPractice.ch2_controlFlow
 
 // 표현식과 구문식
 class S1WhenExpressionAndStatements {

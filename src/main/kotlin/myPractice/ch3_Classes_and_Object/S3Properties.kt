@@ -1,4 +1,4 @@
-package org.example.ch3_Classes_and_Object
+package org.example.myPractice.ch3_Classes_and_Object
 
 class S3Properties(var name: String = "Holmes, Sherlock", var street: String = "Baker") {
 
