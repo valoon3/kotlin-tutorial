@@ -1,6 +1,6 @@
 package ch2_controlFlow
 
-import org.example.ch2_controlFlow.S2Exceptions
+import org.example.myPractice.ch2_controlFlow.S2Exceptions
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*

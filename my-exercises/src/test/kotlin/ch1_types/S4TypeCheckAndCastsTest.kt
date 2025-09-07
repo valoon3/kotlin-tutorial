@@ -1,6 +1,6 @@
 package ch1_types
 
-import org.example.ch1_types.S4TypeCheckAndCasts
+import org.example.myPractice.ch1_types.S4TypeCheckAndCasts
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
