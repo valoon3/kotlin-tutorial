@@ -21,4 +21,10 @@ class Part1_parameter_argumentTest {
         val result = concatenate()
         assertEquals("", result)
     }
+
+    @Test
+    fun namedParameterSyntaxTest() {
+        val fullName = namedParameterSyntax("John", "Doe")
+        assertEquals(fullName, "John Doe")
+    }
 }
