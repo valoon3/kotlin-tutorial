@@ -36,3 +36,18 @@ class InnerClass {
         fun getMethod(): String = "This is inner class method"
     }
 }
+
+abstract  class CoffeeMachine {
+    abstract  fun prepareEspresso()
+    abstract  fun addMilk()
+
+    fun prepareLatte() {
+        prepareEspresso()
+        addMilk()
+    }
+
+    fun prepareDoppio() {
+        prepareEspresso()
+        prepareEspresso()
+    }
+}
