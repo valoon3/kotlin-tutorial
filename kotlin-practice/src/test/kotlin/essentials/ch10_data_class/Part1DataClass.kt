@@ -1,7 +1,7 @@
 package essentials.ch10_data_class
 
-import ch11_data_class.Company
-import ch11_data_class.User
+import essentials.ch11_data_class.Company
+import essentials.ch11_data_class.User
 import java.io.Serializable
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -36,6 +36,7 @@ class Part1DataClass {
 
     @Test
     fun dataClassHashCodeTest() {
+
         val a = User("John", 20)
         val b = User("John", 20)
         val c = User("Jane", 21)
