@@ -35,3 +35,7 @@ fun UserCreationRequest.toUserDto() = UserDto(
 //     block(this)
 //     return this
 // }
+
+fun addUser(request: UserCreationRequest) =
+    request.toUserDto()
+        .also { it -> println(it) }
