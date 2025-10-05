@@ -17,6 +17,15 @@ open class GenericCreature(
 
 class Goblin : Creature by GenericCreature(2, 1)
 
+class Goblin2(
+    private val creature: Creature = GenericCreature(2, 1)
+) : Creature by creature {
+    override fun attack() {
+        println("It will be special goblin attack!")
+        creature.attack()
+    }
+}
+
 fun main() {
     val goblin = Goblin()
     println(goblin.defensePower)
