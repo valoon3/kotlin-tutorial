@@ -6,7 +6,7 @@ interface Creature {
     fun attack()
 }
 
-class GenericCreature(
+open class GenericCreature(
     override val attackPower: Int,
     override val defensePower: Int,
 ): Creature {
@@ -15,13 +15,7 @@ class GenericCreature(
     }
 }
 
-class Goblin : Creature {
-    private val delegate = GenericCreature(2, 1)
-    override val attackPower: Int = delegate.attackPower
-    override val defensePower: Int = delegate.defensePower
-
-    override fun attack() = delegate.attack()
-}
+class Goblin : Creature by GenericCreature(2, 1)
 
 fun main() {
     val goblin = Goblin()
